@@ -1,0 +1,19 @@
+{
+  "name": "nodejs_serialport",
+  "version": "1.0.0",
+  "description": "practica conexion nodejs con serialport",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Danilo Sanchez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "serialport": "^1.7.4",
+    "socket.io": "^1.3.6"
+  }
+}

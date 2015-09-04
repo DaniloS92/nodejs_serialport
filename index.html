@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>NodeJs Chat</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="/static/jquery.js"></script>
+		<link rel="stylesheet" href="/static/bootstrap.min.css">
+		<script src="/static/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container border-radius:250px">
+			<div class="page-header">
+				<h1>Ejemplo SerialPort <small>
+			</div>
+			<div id="content" class="row" style="height: 70%;">
+				<div class="col-md-3"></div>
+				<div id="chatContent" class="col-md-6 col-xs-8">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							DATOS
+						</div>
+						<div id="datos" class="panel-body">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+			jQuery(function($){
+				var socket = io.connect();
+				var datos = $('#datos');
+
+				socket.on('newData',function(data){
+					datos.append('<p style="background: #D9EDF7;padding: 5px;"><strong> Dato del puerto Com:</strong>'+' - '+data+'</div></br>')
+				});
+				
+			});
+		</script>
+	</body>
+</html>
